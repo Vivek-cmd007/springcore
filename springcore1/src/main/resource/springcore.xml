@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="p1" class="com.abc.springcore.bean.Product">
+		<property name="productId" value="1001" />
+		<property name="productName" value="IPhone" />
+		<property name="productPrice" value="100100" />
+	</bean>
+	<bean id="emp1" class="com.abc.springcore.bean.Employee">
+		<property name="empId" value="1111" />
+		<property name="name" value="Vivek" />
+		<property name="skills">
+			<set>
+				<value>Sql</value>
+				<value>Maven</value>
+				<value>JUnit</value>
+			</set>
+		</property>
+		<property name="address" ref="addr1" />
+	</bean>
+
+	<bean id="addr1" class="com.abc.springcore.bean.Address">
+		<property name="addressId" value="11" />
+		<property name="doorNo" value="12-27/78" />
+		<property name="city" value="Ranchi" />
+		<property name="state" value="Jharkhand" />
+
+	</bean>
+	<bean id="stud" class="com.abc.springcore.bean.Student">
+		<constructor-arg name="studentId" value="8001" />
+		<constructor-arg name="studentName" value="Vivek " />
+		<constructor-arg name="age" value="25" />
+	</bean>
+</beans>		
+		

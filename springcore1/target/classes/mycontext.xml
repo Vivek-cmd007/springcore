@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+		<bean id="book1" class="com.abc.springcore.bean.Book">
+			<property name="bookId" value="100"/>
+			<property name="booName" value="Java in action"/>
+			<property name="bookPrice" value="700"/>
+			<property name="bookAuthor" ref="author1"/>
+		</bean>
+		
+		<bean id="author1" class="com.abc.springcore.bean.Author">
+			<property name="authorId" value="10"/>
+			<property name="authorName" value="Jhon"/>
+			<property name="email" value="jhon@tmail"/>
+		
+		</bean>
+</beans>
